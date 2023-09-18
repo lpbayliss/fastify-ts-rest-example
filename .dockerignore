@@ -6,3 +6,7 @@ node_modules
 *.md
 dist
 .env
+.commitlintrc
+.eslintignore
+.eslint.yaml
+.editorconfig
