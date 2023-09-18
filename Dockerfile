@@ -1,4 +1,4 @@
-FROM debian:bullseye as builder
+FROM debian:bookworm as builder
 
 ARG NODE_VERSION=19.3.0
 
@@ -22,7 +22,7 @@ COPY . .
 
 RUN pnpm install --prod --frozen-lockfile --ignore-scripts
 RUN pnpm run build
-FROM debian:bullseye
+FROM debian:bookworm
 
 LABEL fly_launch_runtime="nodejs"
 
